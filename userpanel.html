@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard with Chatbot & More Features</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #b3e0dc;
+      padding: 20px;
+      color: white;
+      text-align: center;
+      animation: slideInDown 1s ease-in-out;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 20px;
+      margin: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      width: 300px;
+      margin: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      color: #333;
+    }
+
+    .progress-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .progress {
+      width: 80%;
+      height: 20px;
+      background-color: #e0e0e0;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      background-color: #c9c616;
+      height: 100%;
+      width: 60%;
+      border-radius: 10px;
+      position: absolute;
+    }
+
+    button {
+      background-color: #0c84ca;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    /* Card Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Chatbot */
+    .chatbot {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #126196;
+      color: white;
+      border-radius: 50px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .chatbot:hover {
+      transform: scale(1.1);
+      background-color: #45a049;
+    }
+
+    /* Chatbot box */
+    .chatbot-box {
+      display: none;
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 300px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      overflow: hidden;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .chatbot-header {
+      background-color: #860ba5;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .chatbot-body {
+      padding: 10px;
+      height: 300px;
+      overflow-y: auto;
+    }
+
+    .chatbot-input {
+      display: flex;
+      padding: 10px;
+    }
+
+    .chatbot-input input {
+      width: 80%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .chatbot-input button {
+      width: 20%;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+
+    .chatbot-input button:hover {
+      background-color: #2ba0c4;
+    }
+
+    .message {
+      margin: 5px 0;
+    }
+
+    .user-message {
+      text-align: right;
+    }
+
+    .bot-message {
+      text-align: left;
+      color: #c7670d;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Your Dashboard</h1>
+  </header>
+
+  <div class="container">
+    <!-- Job Recommendations -->
+    <div class="card">
+      <h3>Personalized Job Recommendations</h3>
+      <p>Based on your profile, we recommend jobs in Software Development, Data Analysis, and more.</p>
+      <button>View Jobs</button>
+    </div>
+
+    <!-- Live Sessions -->
+    <div class="card">
+      <h3>Live Sessions</h3>
+      <p>Join live sessions to interact with experts and enhance your skills.</p>
+      <button>Join Live Session</button><br><br>
+      <button>Access YouTube</button>
+    </div>
+
+    <!-- Scholarships for Graduates -->
+    <div class="card">
+      <h3>Scholarships for Graduates</h3>
+      <p>Explore a range of scholarships tailored for graduates to support your career growth.</p>
+      <button>View Scholarships</button>
+    </div>
+
+    <!-- Government Policies / Notices for Employment -->
+    <div class="card">
+      <h3>Government Policies / Employment Notices</h3>
+      <p>Stay updated with the latest policies and notices related to employment and job markets.</p>
+      <button>View Policies</button>
+    </div>
+
+    <!-- Placement Courses -->
+    <div class="card">
+      <h3>Placement Courses</h3>
+      <p>Enroll in placement-oriented courses to boost your chances of getting hired in top companies.</p>
+      <button>View Courses</button>
+    </div>
+
+    <!-- Skill Exchange -->
+    <div class="card">
+      <h3>Skill Exchange</h3>
+      <p>Exchange your skills with peers to learn new things and grow your network.</p>
+      <button>Join Skill Exchange</button>
+    </div>
+
+    <!-- Learning Path Progress -->
+    <div class="card">
+      <h3>Learning Path Progress</h3>
+      <p>Your current learning progress:</p>
+      <div class="progress-container">
+        <div class="progress">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+      <p>60% Completed</p>
+    </div>
+  </div>
+
+  <!-- Chatbot Button -->
+  <div class="chatbot" onclick="toggleChatbot()">
+    💬
+  </div>
+
+  <!-- Chatbot Box -->
+  <div class="chatbot-box" id="chatbot-box">
+    <div class="chatbot-header">
+      Chat with us!
+    </div>
+    <div class="chatbot-body" id="chatbot-body">
+      <!-- Chat messages will go here -->
+    </div>
+    <div class="chatbot-input">
+      <input type="text" id="user-input" placeholder="Type a message..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    // Toggle chatbot visibility
+    function toggleChatbot() {
+      const chatbotBox = document.getElementById('chatbot-box');
+      chatbotBox.style.display = chatbotBox.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Send a message in the chatbot
+    function sendMessage() {
+      const userInput = document.getElementById('user-input').value;
+      const chatbotBody = document.getElementById('chatbot-body');
+
+      if (userInput.trim() === '') return;
+
+      // User message
+      const userMessage = document.createElement('div');
+      userMessage.className = 'message user-message';
+      userMessage.textContent = userInput;
+      chatbotBody.appendChild(userMessage);
+
+      // Auto-reply from bot
+      setTimeout(() => {
+        const botMessage = document.createElement('div');
+        botMessage.className = 'message bot-message';
+        botMessage.textContent = 'Thank you for your message! We will get back to you shortly.';
+        chatbotBody.appendChild(botMessage);
+        chatbotBody.scrollTop = chatbotBody.scrollHeight;
+      }, 1000);
+
+      document.getElementById('user-input').value = '';  // Clear input
+      chatbotBody.scrollTop = chatbotBody.scrollHeight;  // Scroll to bottom
+    }
+  </script>
+
+</body>
+</html>
