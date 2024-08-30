@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Web App</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Bar -->
+    <header>
+        <div class="header-bar">
+            <div class="header-left">
+                <h2>CareerQuest</h2>
+            </div>
+            <div class="header-right">
+                ✉️ careerquest@gmail.com
+                📞 +91 1234567890
+            </div>
+        </div>
+    </header>
+
+    <!-- Logo Section Below Header -->
+    <div class="logo-container">
+        <img src="logo-no-background.png" alt="Logo" class="logo">
+    </div>
+
+    <nav>
+        <ul class="menu">
+            <li class="menu-item home"><a href="#">Home</a></li>
+            <li class="menu-item about-us dropdown">
+                <a href="#">About Us</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">What is CareerQuest?</a></li>
+                    <li><a href="#">Our Vision</a></li>
+                    <li><a href="#">What we do?</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Our Team</a></li>
+                </ul>
+            </li>
+            <li class="menu-item our-partners"><a href="#">Our Partners</a></li>
+            <li class="menu-item join-us">
+                <a href="#" id="join-us-btn">Join Us</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section style="font-size: 1.2em; line-height: 1.6; font-family: 'Georgia', serif; padding-top: 2em;">
+            <h1 style="margin-top: 2em;">Welcome to CareerQuest!</h1>
+            <p style="margin-top: 2em; margin-bottom: 1.5em;">
+                Unlock your career potential with CareerQuest, your all-in-one platform for career growth.<br>
+                Our simple onboarding process sets you up quickly,<br>
+                while smart job suggestions and personalized recommendations keep you on track.<br>
+                Engage with tailored training and virtual coaching<br>
+                to enhance your skills. Connect with professionals, showcase your abilities in contests,<br>
+                and stay updated with real-time application tracking.<br>
+                With multilingual support and a helpful chatbot, CareerQuest is here to assist you every step of the way.<br>
+                Join us today and start achieving your career goals!
+            </p>
+
+            <button onclick="openRegisterModal()">Join Us</button>
+        </section>
+    </main>
+
+    <!-- Large Image Section -->
+    <section class="large-image">
+        <img src="landingpage.png" alt="Large Image">
+    </section>
+
+    <!-- What is CareerQuest Section -->
+    <section class="full-page-section">
+        <h2>What is CareerQuest?</h2>
+        <p>
+            CareerQuest is an all-in-one platform designed to enhance your career growth and development. 
+            We offer a variety of features including easy user onboarding, smart job suggestions, and tailored 
+            training opportunities to help you succeed in your career journey. Our platform also includes 
+            virtual career coaching, a community for networking, and real-time application tracking to keep 
+            you informed and engaged. With multilingual support and a chatbot to assist you, CareerQuest is 
+            here to guide you every step of the way.
+        </p>
+    </section>
+
+    <!-- Our Vision Section -->
+    <section class="full-page-section vision-section">
+        <h2>Our Vision on CareerQuest</h2>
+        <p>
+            At CareerQuest, our vision is to revolutionize career development and job searching by providing 
+            a comprehensive and integrated platform that meets the diverse needs of our users. We aim to 
+            empower individuals by offering innovative tools and resources that facilitate career growth and 
+            professional success. Through our platform, we strive to bridge the gap between education and 
+            employment, ensuring that everyone has access to the opportunities they need to thrive in their 
+            chosen career paths.
+        </p>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="full-page-section what-we-do-section">
+        <h2>What We Do</h2>
+        <p>
+            At CareerQuest, we are dedicated to providing a comprehensive suite of services to support your career development. 
+            Our platform offers personalized job suggestions, detailed application tracking, and tailored training resources. 
+            We also facilitate networking opportunities through our community space and host skill contests to help you showcase 
+            your abilities. Additionally, our virtual career coaching ensures you receive expert guidance, and our multilingual 
+            support and chatbot are available to assist you every step of the way.
+        </p>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="full-page-section our-story-section">
+        <h2>Our Story</h2>
+        <p>
+            Our journey began with a simple yet powerful idea: to bridge the gap between education and employment. With a 
+            deep understanding of the challenges faced by job seekers and students, we set out to create a platform that 
+            not only connects individuals with opportunities but also equips them with the tools and resources needed for success. 
+            Through innovation and dedication, we have built CareerQuest into a hub for career growth, offering personalized 
+            support and fostering a community of professionals committed to excellence. Join us as we continue to evolve and 
+            make a difference in the world of career development.
+        </p>
+    </section>
+
+    <!-- Our Team Section -->
+    <section class="full-page-section our-team-section">
+        <h2>Our Team</h2>
+        <p>
+            At CareerQuest, we have assembled a diverse and talented team dedicated to helping you achieve your career goals. 
+            Our team includes industry experts, career coaches, and support staff, each bringing a wealth of knowledge and experience 
+            to the table. We work collaboratively to ensure that our platform meets your needs and provides the best possible support 
+            throughout your career journey. Meet the people who make CareerQuest a success and are passionate about your growth and development.
+        </p>
+    </section>
+
+    <!-- Modal Structure -->
+    <div id="modalOverlay" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="registerTab" class="active">Register</button>
+                <button id="loginTab">Login</button>
+            </div>
+            <div id="registerForm" class="form-content">
+                <h2>Get Started</h2>
+                <p>Join our hands to make lives better!</p>
+                <input type="text" placeholder="Enter Full Name">
+                <input type="email" placeholder="Enter Email Address">
+                <input type="text" placeholder="Enter Phone Number">
+                <select>
+                    <option>Select Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+                <input type="date" placeholder="Date of Birth">
+                <input type="password" placeholder="Enter Password">
+                <input type="password" placeholder="Confirm Password">
+                <input type="text" placeholder="Enter OTP">
+                <button>Get OTP</button>
+                <button>Register</button>
+            </div>
+            <div id="loginForm" class="form-content" style="display: none;">
+                <h2>Login</h2>
+                <input type="email" placeholder="Enter Email Address">
+                <input type="password" placeholder="Enter Password">
+                <button>Login</button>
+            </div>
+        </div>
+    </div> 
+
+    
+    
+
+    <!-- JavaScript -->
+    <script src="newscript.js"></script>
+
+    
+
+</body>
+</html>

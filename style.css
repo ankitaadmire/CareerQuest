@@ -1,0 +1,421 @@
+  /* General Reset */
+  html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Georgia', serif;
+}
+
+/* Header Bar Styles */
+.header-bar {
+    background-color: #b3e0dc; /* Light teal pastel color for header bar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #333;
+}
+
+/* Logo Container Styles */
+.logo-container {
+    text-align: left; /* Align the logo to the left */
+    margin: 0; /* Remove margin to align closer to the header */
+    padding: 10px; /* Add padding around the logo */
+    display: inline-block; /* Keep the background only around the logo */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    position: absolute; /* Allow precise positioning */
+    left: 30px; /* Adjust as needed to position logo to the left */
+    top: 100px; /* Position logo below the header */
+}
+
+/* Logo Styles */
+.logo {
+    height: 150px; /* Double the size of the logo */
+}
+
+/* Navigation Menu Container */
+nav {
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center the navigation menu horizontally */
+    margin: 20px 0; /* Optional: Add vertical spacing */
+}
+
+/* Main menu style */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox to lay out menu items */
+}
+
+/* Menu Item Style */
+.menu li {
+    position: relative;
+    margin-right: 20px; /* Space between menu items */
+}
+
+.menu li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    color: #333;
+}
+
+/* Specific Font Sizes */
+.menu li:nth-child(1) a {
+    font-size: 28px; /* Font size for Home */
+}
+
+.menu li:nth-child(2) a {
+    font-size: 28px; /* Font size for About Us */
+}
+
+.menu li:nth-child(3) a {
+    font-size: 28px; /* Font size for Our Partners */
+}
+
+/* Dropdown menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 0;
+}
+
+.dropdown-content li {
+    width: 100%;
+}
+
+.dropdown-content li a {
+    padding: 10px;
+    text-align: left;
+    color: #333;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Join Us Button */
+.menu-item.join-us a {
+    font-size: 20px; /* Adjust font size as needed */
+    background-color: #b3e0dc; /* Button background color */
+    color: #000000; /* Text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.menu-item.join-us a:hover {
+    background-color: #a0c8c6; /* Darker shade on hover */
+}
+
+
+
+/* Position the large image properly */
+.menu-item.large-image {
+    position: fixed; /* Keep the image in a fixed position relative to the viewport */
+    right: 0; /* Align the image to the right edge */
+    top: 100px; /* Position the image below the header */
+    z-index: -1; /* Place the image behind other elements */
+}
+
+/* Adjust the size of the image */
+.menu-item.large-image img {
+    width: 500px; /* Width of the image */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the image is displayed as a block element */
+    max-height: 80vh; /* Responsive height based on viewport height */
+}
+
+
+/* Popup Modal Styles */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black with opacity */
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Responsive width */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Full-Page what is careerquest */
+.full-page-section {
+    background-color: #b3e0dc; /* Background color */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    padding: 20px; /* Add padding */
+}
+
+.full-page-section h2 {
+    font-size: 2em; /* Larger font size for the heading */
+    margin-bottom: 1em; /* Space below the heading */
+}
+
+.full-page-section p {
+    font-size: 1.2em; /* Font size for the paragraph */
+    line-height: 1.6; /* Line height for readability */
+    max-width: 800px; /* Max width for the text block */
+    margin: 0 auto; /* Center the text block */
+}
+
+
+/* Full Page our vision */
+.full-page-section {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+/* Vision Section Specific Styles */
+.vision-section {
+    background-color: #ffffff; /* White background */
+}
+
+/* Heading Styles */
+.full-page-section h2 {
+    font-size: 2em; /* Adjust font size as needed */
+    margin-bottom: 0.5em; /* Space below the heading */
+}
+
+/* Paragraph Styles */
+.full-page-section p {
+    font-size: 1.2em; /* Adjust font size as needed */
+    text-align: center; /* Center align text */
+    max-width: 800px; /* Max width of the paragraph */
+}
+
+
+/* Full Page what we do */
+.full-page-section {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+/* What We Do Section Specific Styles */
+.what-we-do-section {
+    background-color: #b3e0dc; /* Light teal pastel color */
+}
+
+/* Heading Styles */
+.full-page-section h2 {
+    font-size: 2em; /* Adjust font size as needed */
+    margin-bottom: 0.5em; /* Space below the heading */
+}
+
+/* Paragraph Styles */
+.full-page-section p {
+    font-size: 1.2em; /* Adjust font size as needed */
+    text-align: center; /* Center align text */
+    max-width: 800px; /* Max width of the paragraph */
+}
+
+
+/* Full Page our story */
+.full-page-section {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+/* Our Story Section Specific Styles */
+.our-story-section {
+    background-color: #ffffff; /* White background color */
+}
+
+/* Heading Styles */
+.full-page-section h2 {
+    font-size: 2em; /* Adjust font size as needed */
+    margin-bottom: 0.5em; /* Space below the heading */
+}
+
+/* Paragraph Styles */
+.full-page-section p {
+    font-size: 1.2em; /* Adjust font size as needed */
+    text-align: center; /* Center align text */
+    max-width: 800px; /* Max width of the paragraph */
+}
+
+
+/* Full Page our team */
+.full-page-section {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+/* Our Team Section Specific Styles */
+.our-team-section {
+    background-color: #b3e0dc; /* Light teal pastel color */
+}
+
+/* Heading Styles */
+.full-page-section h2 {
+    font-size: 2em; /* Adjust font size as needed */
+    margin-bottom: 0.5em; /* Space below the heading */
+}
+
+/* Paragraph Styles */
+.full-page-section p {
+    font-size: 1.2em; /* Adjust font size as needed */
+    text-align: center; /* Center align text */
+    max-width: 800px; /* Max width of the paragraph */
+}
+
+
+
+/* Basic styling for buttons */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #b3e0dc;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Modal overlay to cover the background */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Slightly transparent black */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Modal content box */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px; /* Increase width to make the frame bigger */
+    max-width: 90%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Modal header for switching between Register and Login */
+.modal-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.modal-header button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px 15px;
+    color: black;
+}
+
+.modal-header button.active {
+    border-bottom: 2px solid #b3e0dc; /* Active tab indicator */
+    color: black;
+}
+
+/* Form content styling */
+.form-content input,
+.form-content select,
+.form-content button {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-content h2 {
+    margin-bottom: 10px;
+}
+
+.form-content p {
+    margin-bottom: 20px;
+    color: grey;
+}
+/* Center the modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Slightly transparent black */
+    display: flex; /* Changed from 'none' to 'flex' for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 9999;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px; /* Increased width for better layout */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
