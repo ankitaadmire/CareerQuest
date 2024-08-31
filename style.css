@@ -39,6 +39,91 @@ nav {
     margin: 20px 0; /* Optional: Add vertical spacing */
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.career-quest1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.career-quest2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #b3e0dc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.text-content {
+    max-width: 50%;
+}
+
+.text-content h1 {
+    font-size: 2.5rem;
+    color: #1d3557;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.join-btn {
+    background-color: #457b9d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.join-btn:hover {
+    background-color: #1d3557;
+}
+
+.image-content img {
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .career-quest {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .text-content, .image-content {
+        max-width: 100%;
+    }
+    
+    .image-content img {
+        max-width: 100%;
+    }
+}
+
 /* Main menu style */
 .menu {
     list-style: none;
@@ -172,250 +257,145 @@ nav {
     text-decoration: none;
     cursor: pointer;
 }
-
-
-
-
-
-/* Full-Page what is careerquest */
-.full-page-section {
-    background-color: #b3e0dc; /* Background color */
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center text */
-    padding: 20px; /* Add padding */
-}
-
-.full-page-section h2 {
-    font-size: 2em; /* Larger font size for the heading */
-    margin-bottom: 1em; /* Space below the heading */
-}
-
-.full-page-section p {
-    font-size: 1.2em; /* Font size for the paragraph */
-    line-height: 1.6; /* Line height for readability */
-    max-width: 800px; /* Max width for the text block */
-    margin: 0 auto; /* Center the text block */
-}
-
-
-/* Full Page our vision */
-.full-page-section {
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2em;
-    box-sizing: border-box;
-}
-
-/* Vision Section Specific Styles */
-.vision-section {
-    background-color: #ffffff; /* White background */
-}
-
-/* Heading Styles */
-.full-page-section h2 {
-    font-size: 2em; /* Adjust font size as needed */
-    margin-bottom: 0.5em; /* Space below the heading */
-}
-
-/* Paragraph Styles */
-.full-page-section p {
-    font-size: 1.2em; /* Adjust font size as needed */
-    text-align: center; /* Center align text */
-    max-width: 800px; /* Max width of the paragraph */
-}
-
-
-/* Full Page what we do */
-.full-page-section {
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2em;
-    box-sizing: border-box;
-}
-
-/* What We Do Section Specific Styles */
-.what-we-do-section {
-    background-color: #b3e0dc; /* Light teal pastel color */
-}
-
-/* Heading Styles */
-.full-page-section h2 {
-    font-size: 2em; /* Adjust font size as needed */
-    margin-bottom: 0.5em; /* Space below the heading */
-}
-
-/* Paragraph Styles */
-.full-page-section p {
-    font-size: 1.2em; /* Adjust font size as needed */
-    text-align: center; /* Center align text */
-    max-width: 800px; /* Max width of the paragraph */
-}
-
-
-/* Full Page our story */
-.full-page-section {
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2em;
-    box-sizing: border-box;
-}
-
-/* Our Story Section Specific Styles */
-.our-story-section {
-    background-color: #ffffff; /* White background color */
-}
-
-/* Heading Styles */
-.full-page-section h2 {
-    font-size: 2em; /* Adjust font size as needed */
-    margin-bottom: 0.5em; /* Space below the heading */
-}
-
-/* Paragraph Styles */
-.full-page-section p {
-    font-size: 1.2em; /* Adjust font size as needed */
-    text-align: center; /* Center align text */
-    max-width: 800px; /* Max width of the paragraph */
-}
-
-
-/* Full Page our team */
-.full-page-section {
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2em;
-    box-sizing: border-box;
-}
-
-/* Our Team Section Specific Styles */
-.our-team-section {
-    background-color: #b3e0dc; /* Light teal pastel color */
-}
-
-/* Heading Styles */
-.full-page-section h2 {
-    font-size: 2em; /* Adjust font size as needed */
-    margin-bottom: 0.5em; /* Space below the heading */
-}
-
-/* Paragraph Styles */
-.full-page-section p {
-    font-size: 1.2em; /* Adjust font size as needed */
-    text-align: center; /* Center align text */
-    max-width: 800px; /* Max width of the paragraph */
-}
-
-
-
 /* Basic styling for buttons */
-button {
+header {
+    background-color: #b3e0dc;
+    padding: 20px;
+    text-align: right;
+}
+
+header #join-us-btn {
     padding: 10px 20px;
-    margin: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #b3e0dc;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form select, form button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
     background-color: #b3e0dc;
     color: white;
     border: none;
-    cursor: pointer;
 }
 
-/* Modal overlay to cover the background */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Slightly transparent black */
-    display: none; /* Hidden by default */
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-/* Modal content box */
-.modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 400px; /* Increase width to make the frame bigger */
-    max-width: 90%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    text-align: center;
-}
-
-/* Modal header for switching between Register and Login */
-.modal-header {
+.feedback-form {
+    max-width: 600px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #b3e0dc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+
+  .feedback-form h2 {
+    text-align: center;
     margin-bottom: 20px;
-}
+  }
 
-.modal-header button {
-    background: none;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    padding: 5px 15px;
-    color: black;
-}
+  .form-group {
+    margin-bottom: 15px;
+  }
 
-.modal-header button.active {
-    border-bottom: 2px solid #b3e0dc; /* Active tab indicator */
-    color: black;
-}
-
-/* Form content styling */
-.form-content input,
-.form-content select,
-.form-content button {
+  .form-group label {
     display: block;
-    width: 90%;
-    margin: 10px auto;
-    padding: 10px;
-    font-size: 16px;
-}
+    margin-bottom: 5px;
+  }
 
-.form-content h2 {
-    margin-bottom: 10px;
-}
-
-.form-content p {
-    margin-bottom: 20px;
-    color: grey;
-}
-/* Center the modal */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
+  .form-group input, 
+  .form-group textarea, 
+  .form-group select {
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Slightly transparent black */
-    display: flex; /* Changed from 'none' to 'flex' for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    z-index: 9999;
-}
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
 
-.modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 400px; /* Increased width for better layout */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
+  .form-group textarea {
+    resize: vertical;
+    height: 100px;
+  }
+
+  .form-group input[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  .form-group input[type="submit"]:hover {
+    background-color: #218838;
+  }
